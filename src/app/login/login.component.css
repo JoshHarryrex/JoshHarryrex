@@ -1,0 +1,29 @@
+body {
+    background-image:url('./../../assets/Loginbackground1.jpg');
+    /* margin: 0px; */
+    min-height: 100%;
+    width: 100%;
+    background-size: 100% ;  
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.form{
+    top:50%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width:400px;
+    max-height: 600px;
+}
+form{
+    border-style: groove;
+    border-color: blue;
+    padding:10%;
+    background-color: rgb(227, 224, 221);
+    
+   /* margin: -50px 0 0 -50px; */
+}
+
+  

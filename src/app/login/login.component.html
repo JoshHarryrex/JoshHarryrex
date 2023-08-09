@@ -1,0 +1,61 @@
+<body>
+  <div class="form">
+    <!-- <div class="d-flex justify-content-center"> -->
+    <!-- <mat-label>Outline form field</mat-label>
+    <input matInput placeholder="Placeholder" />
+    <mat-hint>Hint</mat-hint> -->
+
+    <form [formGroup]="loginform" (ngSubmit)="onSubmit(loginform)">
+      <!-- <div class="navbar navbar-light bg-light"> -->
+      <div class="container-fluid">
+        <a class="navbar-brand">
+          <img
+            src="./../../assets/Blue Logo.png"
+            alt=""
+            width="150"
+            height="150"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+      </div>
+      <!-- </div> -->
+      <br />
+      <h3 class="text-center">LOGIN</h3>
+      <mat-form-field
+        appearance="outline"
+        class="d-flex justify-content-center example-full-width"
+      >
+        <mat-label>Username</mat-label>
+        <input
+          matInput
+          type="Username"
+          class="form-control mat-elevation-z8"
+          placeholder="Email/UserId"
+          formControlName="Username"
+        />
+      </mat-form-field>
+      <br />
+      <!-- <label>Password:</label> -->
+      <mat-form-field
+        appearance="outline"
+        class="d-flex justify-content-center example-full-width"
+      >
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          type="password"
+          class="form-control mat-elevation-z8"
+          placeholder="Password"
+          formControlName="password"
+        />
+      </mat-form-field>
+
+      <section>
+        <div class="d-flex justify-content-center">
+          <button type="submit" mat-raised-button color="primary" (click)="Login()">Login</button>
+        </div>
+      </section>
+    </form>
+  </div>
+</body>
+<!-- </div> -->

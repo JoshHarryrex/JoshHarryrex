@@ -1,0 +1,241 @@
+<form [formGroup]="addstockform" (ngSubmit)="onSubmit(addstockform)">
+  <div class="container">
+    <div
+      class="row text-white text-left align-center"
+      style="
+        background-color: rgb(234, 27, 27);
+        height: 50px;
+        width: 100%;
+        padding: 15px 0;
+      "
+    >
+      <div class="col">Enter All The Product Details</div>
+    </div>
+  </div>
+  &nbsp; &nbsp;
+  <div class="container">
+    <div class="row">
+      <div
+        class="col text-white text-left align-center"
+        style="
+          background-color: rgb(65, 27, 234);
+          height: 50px;
+          width: 100%;
+          padding: 15px 0;
+        "
+      >
+        Product details
+      </div>
+    </div>
+    <div class="row align-items-start">
+      <div class="col">
+        <mat-label>Product Name</mat-label>
+        <mat-form-field>
+          <input matInput formControlName="Productname" />
+          <!-- <mat-hint align="end">{{input.value.length}}/10</mat-hint> -->
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-label>Department</mat-label>
+        <mat-form-field>
+          <mat-select>
+            <mat-option formControlName="Department" value="option"
+              >Option</mat-option
+            >
+          </mat-select>
+          <!-- <mat-hint align="end">Here's the dropdown arrow ^</mat-hint> -->
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-label>Type</mat-label>
+        <mat-form-field>
+          <mat-select>
+            <mat-option formControlName="Type" value="option"
+              >Option</mat-option
+            >
+          </mat-select>
+          <!-- <mat-hint align="end">Here's the dropdown arrow ^</mat-hint> -->
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-label>Serial No</mat-label><br />
+        <mat-form-field>
+          <input matInput formControlName="SerialNo" />
+          <!-- <mat-hint align="end">{{input.value.length}}/10</mat-hint> -->
+        </mat-form-field>
+      </div>
+      <div class="col">One of three columns</div>
+    </div>
+
+    <div class="row align-items-end">
+      <div class="col">
+        <mat-label>Device ID</mat-label><br />
+        <mat-form-field>
+          <input matInput formControlName="DeviceID" />
+          <!-- <mat-hint align="end">{{input.value.length}}/10</mat-hint> -->
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-label>Make</mat-label><br />
+        <mat-form-field>
+          <input matInput formControlName="Make" />
+          <!-- <mat-hint align="end">{{input.value.length}}/10</mat-hint> -->
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-label>Model</mat-label><br />
+        <mat-form-field>
+          <input matInput formControlName="Model" />
+          <!-- <mat-hint align="end">{{input.value.length}}/10</mat-hint> -->
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-label>Configuration</mat-label><br />
+        <mat-form-field>
+          <input matInput formControlName="Configuration" />
+          <!-- <mat-hint align="end">{{input.value.length}}/10</mat-hint> -->
+        </mat-form-field>
+      </div>
+      <div class="col">One of three columns</div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div
+        class="col text-white text-left align-center"
+        style="
+          background-color: rgb(65, 27, 234);
+          height: 50px;
+          width: 100%;
+          padding: 15px 0;
+        "
+      >
+        Device Location
+      </div>
+      <div class="row align-items-center">
+        <div class="col">
+          <mat-label>Floor</mat-label><br />
+          <mat-form-field>
+            <mat-select>
+              <mat-option formControlName="Floor" value="option"
+                >Option</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-label>Location</mat-label><br />
+          <mat-form-field>
+            <mat-select>
+              <mat-option formControlName="Location" value="option"
+                >Option</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-label>Quantity</mat-label><br />
+          <mat-form-field>
+            <mat-select>
+              <mat-option formControlName="Quantity" value="option"
+                >Option</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div
+          class="col text-white text-left align-center"
+          style="
+            background-color: rgb(65, 27, 234);
+            height: 50px;
+            width: 100%;
+            padding: 15px 0;
+          "
+        >
+          Purchase details
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col">
+          <mat-label>Vendor</mat-label>
+          <mat-form-field>
+            <mat-select>
+              <mat-option formControlName="Vendor" value="option"
+                >Option</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-label>Product value</mat-label>
+          <mat-form-field>
+            <mat-select>
+              <mat-option formControlName="ProductValue" value="option"
+                >Option</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-label>Purchase Date</mat-label>
+          <input
+            type="text"
+            placeholder="select date"
+            formControlName="PurchaseDate"
+            bsDatepicker
+            [bsConfig]="{ isAnimated: true }"
+          />
+        </div>
+        <div class="col">
+          <mat-label>Warranty/Expiry Date</mat-label>
+          <input
+            type="text"
+            placeholder="select date"
+            formControlName="Warranty"
+            bsDatepicker
+            [bsConfig]="{ isAnimated: true }"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div
+          class="col text-white text-left align-center"
+          style="
+            background-color: rgb(65, 27, 234);
+            height: 50px;
+            width: 100%;
+            padding: 15px 0;
+          "
+        >
+          Review
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col">
+          <mat-label>Status</mat-label><br />
+          <mat-form-field>
+            <mat-select>
+              <mat-option formControlName="Status" value="option">Option</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-label>Review</mat-label><br />
+          <mat-form-field>
+            <mat-select>
+              <mat-option formControlName="Review" value="option">Option</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-primary">Reset</button>
+  </div>
+</form>
